@@ -22,9 +22,9 @@ trump_rating = float(polls[len(polls) - 1]['choices']['Favorable'])
 print("And Trump's Approval rating is " + str(trump_rating) + '%')
 
 if movie_rating > trump_rating:
-    print('That means ' + movie + '\'s rating is ' + str(movie_rating - trump_rating) + '% better than Trump!')
+    print('That means ' + movie + '\'s rating is ' + str(movie_rating - trump_rating) + '% better than Trump! :D')
 else:
-    print('That means Trump is ' + str(trump_rating - movie_rating) + '% better than ' + movie + '!')
+    print('That means Trump is ' + str(trump_rating - movie_rating) + '% better than ' + movie + '! D:')
 
 
 
