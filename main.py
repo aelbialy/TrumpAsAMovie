@@ -6,16 +6,17 @@ import requests
 
 
 movie = input("Enter movie name: ")
-print("This is your movie " + movie)
-movie_title_bit = 
+#print("This is your movie " + movie)
+movie_title_bit = movie.replace(' ', '+')
+#print(movie_title_bit)
 
 
-r = requests.get("http://www.omdbapi.com/?t=mall+Cop+&y=&plot=short&r=json")
+
+r = requests.get("http://www.omdbapi.com/?t="+movie_title_bit+"&y=&plot=short&r=json")
 #print(r.json())
 data = r.json()
-
-
-print("Mall Cop's Movie rating is " + str(float(data["imdbRating"])*10) + "%") 
+print(movie + "'s Movie rating is " + str(float(data["imdbRating"])*10) + "%") 
+print("And Trump's Approval rating is (inserted data here)")
 
 r = requests.get("http://elections.huffingtonpost.com/pollster/donald-trump-favorable-rating.json")
 polls = r.json()['polls']
